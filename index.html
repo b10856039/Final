@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+
+        #menu{
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        #menu:checked~.header nav{
+            left:0;
+        }      
+        .header{
+            height:60px;
+            background-color: rgb(247, 239, 239);
+            position: relative;
+        }
+        .logo{
+            width: 60px;
+            height:40px;
+            margin-left: 10px;
+            margin-top:9px;
+        }
+        .logo a{
+            display:block;
+            height: 40px;
+        }
+        .logo img{
+            vertical-align:middle;            
+        }
+        .Menu_btn{
+            width:50px;
+            height:50px;
+            background-color:rgb(228, 226, 226) ;
+            display:block;
+            position: absolute;
+            top:5px;
+            right:10px;
+        }
+        .Menu_btn span{
+            opacity:0;
+            width:1px;
+            height:1px;
+            display:block;
+            overflow: hidden;
+        }
+        .Menu_btn::before{
+            content:"";
+            position: absolute;
+            height:4px;
+            left:9px;            
+            width:32px;
+            background:rgb(180, 90, 90);
+            top:0;
+            bottom:0;
+            margin:auto;
+            box-shadow:0 10px 0 rgb(180, 90, 90),0 -10px 0 rgb(180, 90, 90) ;
+        }
+        nav{
+            width:80%;
+            height:100vh;
+            background-color: rgb(100, 138, 107);
+            position: absolute;
+            top:60px;
+            left:-100%;
+            transition: .3s;
+        }
+        nav a{
+            display:block;
+            text-decoration: none;
+            color:white;
+            padding:20px 30px;
+            border-bottom: 1px solid white ;
+        }
+        @media screen and (min-width:768px){
+            .Menu_btn{
+                display:none;
+            }
+            .header{
+                display: flex;
+                justify-content:space-between;
+                background-color: rgb(100, 138, 107);
+
+            }
+            nav {
+                position: relative;
+                left:0;
+                top:0;
+                display:flex;
+                width:auto;
+                height:auto;
+                background-color:transparent;
+            }
+            nav a{
+                border-bottom: none;
+            }
+        }
+
+        .bg img{
+            width:100%;
+        }
+        img {
+            vertical-align: bottom;
+            width: 100%;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 36px;
+        }
+        
+        .title {
+            margin: 0 0px 10px;
+            padding: 20px 10px;
+            background-color: #ccc;
+        }
+        
+        .title p {
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .item {
+            margin: 0 10px 20px;
+        }
+        
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .service{
+            background-color: khaki;
+        }
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex;
+            }
+            .service .item{
+                display:flex;
+            }
+            .service .item .pic,
+            .service .item .text{
+                width:50%;
+                margin:0;
+            }
+            .service .item .text{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" name="" id="menu">
+
+    <div class=header>
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40?random=1"></a>
+        </h1>
+    <label for="menu" class="Menu_btn">
+           <span>選單</span> 
+    </label>
+    <nav>
+        <a href="#">測試1</a>
+        <a href="#">測試2</a>
+        <a href="#">測試3</a>
+        <a href="#">測試4</a>
+        <a href="#">測試5</a>
+        <a href="#">測試6</a>
+    </nav>
+    </div>
+
+    <div class="bg">
+        <img src="https://picsum.photos/60/40?random=5">
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="title">
+                <h2>測試</h2>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="wrap">            
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=3">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>內容</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=4">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>內容</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200?random=5">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>內容</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="title">
+                <h2>標題</h2>
+                <p>內容</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/60/40?random=12">
+                    </div>                              
+                    <div class="text">
+                        <h3>title</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>2020/06/05</p>
+    </div>
+</body>
+</html>
