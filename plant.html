@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+
+        #menu{
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        #menu:checked~.header nav{
+            left:0;
+        }      
+        .header{
+            height:60px;
+            background-color: rgb(78, 177, 223);
+            position: relative;
+        }
+        .logo{
+            width: 180px;
+            height:40px;
+        }
+        .logo a{
+            display:block;
+            height: 40px;
+            text-decoration: none;
+            font-size:20px;
+            padding: 15px 0;
+            color:rgb(22, 39, 39);
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .Menu_btn{
+            width:50px;
+            height:50px;
+            background-color:rgb(78, 177, 223) ;
+            display:block;
+            position: absolute;
+            top:5px;
+            right:10px;
+        }
+        .Menu_btn span{
+            opacity:0;
+            width:1px;
+            height:1px;
+            display:block;
+            overflow: hidden;
+        }
+        .Menu_btn::before{
+            content:"";
+            position: absolute;
+            height:4px;
+            left:9px;            
+            width:32px;
+            background:white;
+            top:0;
+            bottom:0;
+            margin:auto;
+            box-shadow:0 10px 0 white,0 -10px 0 white ;
+        }
+        nav{
+            width:40%;
+            height:100vh;
+            background-color: rgb(78, 177, 223);
+            position: absolute;
+            top:60px;
+            left:-100%;
+            transition: .3s;
+        }
+        nav a{
+            display:block;
+            text-decoration: none;
+            color:white;
+            padding:20px 30px;
+            border-bottom: 1px solid white ;
+        }
+        @media screen and (min-width:768px){
+            .Menu_btn{
+                display:none;
+            }
+            .header{
+                display: flex;
+                justify-content:space-between;
+                background-color: rgb(78, 177, 223);            
+            }
+            nav {
+                position: relative;
+                left:0;
+                top:0;
+                display:flex;
+                width:auto;
+                height:auto;
+                background-color:transparent;
+            }
+            nav a{
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu">
+
+    <div class=header>
+        <h1 class="logo">
+            <a href="index.html">台灣常見入侵生物</a>
+        </h1>
+    <label for="menu" class="Menu_btn">
+           <span>選單</span> 
+    </label>    
+    <nav>        
+        <a href="#">外來動物</a>
+        <a href="#">外來植物</a>
+        <a href=https://b10856039.github.io/Final/index.html>返回上一頁</a>      
+    </nav>
+    </div>
+</body>
+</html>
