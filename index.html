@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <title></title>
     <style>
         *{
             margin:0;
@@ -21,26 +23,26 @@
         }      
         .header{
             height:60px;
-            background-color: rgb(247, 239, 239);
+            background-color: rgb(78, 177, 223);
             position: relative;
         }
         .logo{
-            width: 60px;
+            width: 180px;
             height:40px;
-            margin-left: 10px;
-            margin-top:9px;
         }
         .logo a{
             display:block;
             height: 40px;
-        }
-        .logo img{
-            vertical-align:middle;            
+            text-decoration: none;
+            font-size:20px;
+            padding: 15px 0;
+            color:rgb(22, 39, 39);
+            font-family: 'Noto Sans TC', sans-serif;
         }
         .Menu_btn{
             width:50px;
             height:50px;
-            background-color:rgb(228, 226, 226) ;
+            background-color:rgb(78, 177, 223) ;
             display:block;
             position: absolute;
             top:5px;
@@ -59,16 +61,16 @@
             height:4px;
             left:9px;            
             width:32px;
-            background:rgb(180, 90, 90);
+            background:white;
             top:0;
             bottom:0;
             margin:auto;
-            box-shadow:0 10px 0 rgb(180, 90, 90),0 -10px 0 rgb(180, 90, 90) ;
+            box-shadow:0 10px 0 white,0 -10px 0 white ;
         }
         nav{
-            width:80%;
+            width:40%;
             height:100vh;
-            background-color: rgb(100, 138, 107);
+            background-color: rgb(78, 177, 223);
             position: absolute;
             top:60px;
             left:-100%;
@@ -88,8 +90,7 @@
             .header{
                 display: flex;
                 justify-content:space-between;
-                background-color: rgb(100, 138, 107);
-
+                background-color: rgb(78, 177, 223);            
             }
             nav {
                 position: relative;
@@ -103,57 +104,10 @@
             nav a{
                 border-bottom: none;
             }
-        }
-
-        .bg img{
-            width:100%;
-        }
-        img {
-            vertical-align: bottom;
-            width: 100%;
-        }
-        
-        .item-group {
-            width: 100%;
-            max-width: 1400px;
-            margin: auto;
-        }
-        .footer {
-            background-color: #333;
-            color: #aaa;
-            text-align: center;
-            padding: 10px 0;
-        }
-        
-        .title h2 {
-            text-align: center;
-            font-size: 36px;
-        }
-        
-        .title {
-            margin: 0 0px 10px;
-            padding: 20px 10px;
-            background-color: #ccc;
-        }
-        
-        .title p {
-            font-size: 16px;
-            text-align: center;
-        }
-        
-        .item {
-            margin: 0 10px 20px;
-        }
-        
-        .item .text h3 {
-            font-size: 24px;
-            text-align: center;
-        }
-
-        .service{
-            background-color: khaki;
-        }
-        @media screen and (min-width:768px) {
+            .introduction{
+                display:block;
+                font-size: 20px;
+            }
             .item-group {
                 display: flex;
             }
@@ -171,7 +125,50 @@
                 justify-content: center;
             }
         }
-
+           
+        .bg img{
+                width:100%;
+            }
+        img{
+            vertical-align: bottom;
+        }
+        .introduction h2{
+            text-align:center;
+            font-size: 20px;
+            margin:10px;
+            font-family: 'Noto Sans TC', sans-serif;         
+        }
+        .introduction p{
+            font-size: 16px;
+            line-height: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .pic img{
+            width:100%;
+        }
+        .service{
+            background-color: lightcyan;
+            margin:10px;
+        }
+        .pic img{
+            width:100%;
+        }
+        .text h2{
+            text-align:center;
+            font-size: 20px;
+            margin:15px;
+            font-family: 'Noto Sans TC', sans-serif;         
+        }
+        .text p{
+            font-size: 12px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -180,88 +177,47 @@
 
     <div class=header>
         <h1 class="logo">
-            <a href="#"><img src="https://picsum.photos/60/40?random=1"></a>
+            <a href="#">台灣常見入侵生物</a>
         </h1>
     <label for="menu" class="Menu_btn">
            <span>選單</span> 
-    </label>
+    </label>    
     <nav>
-        <a href="#">測試1</a>
-        <a href="#">測試2</a>
-        <a href="#">測試3</a>
-        <a href="#">測試4</a>
-        <a href="#">測試5</a>
-        <a href="#">測試6</a>
+        <a href="#">外來動物</a>
+        <a href="#">外來植物</a>
     </nav>
     </div>
-
     <div class="bg">
-        <img src="https://picsum.photos/60/40?random=5">
-    </div>
-
-    <div class="service">
-        <div class="wrap">
-            <div class="title">
-                <h2>測試</h2>
-            </div>
-        </div>
+        <img src="image.jpg">
     </div>
     <div class="about">
-        <div class="wrap">            
-            <div class="item-group">
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://picsum.photos/300/200?random=3">
-                    </div>
-                    <div class="text">
-                        <h3>title</h3>
-                        <p>測試內容:很好現代產權他們複製什麼事訊息是否機構體現貼圖可以用瀏覽器，球員思想運作始終本網站防治決策勞動套件流行消除地上手機鈴聲，網易一口氣她是插入百姓下載，衣服球員回答一生他不統計真正某種不是常常製造部門留在，兩人專用山西突然尋找家庭等人國內是指商務創意就像，公。</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://picsum.photos/300/200?random=4">
-                    </div>
-                    <div class="text">
-                        <h3>title</h3>
-                        <p>測試內容:相信以為似乎年度地區固定製造心靈之間擴大相當都市回事傳來，功能上升推坑王很大充滿歡迎您手續文章口氣透露，微軟您可以又有陷入魯蛇元素並不是，功能什麼時候我一如下，太多其實睡覺一片說完本類以便以前，特徵醫藥內容簡介部落，低價還可以過去目的富岡校長定義，只不過。</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://picsum.photos/300/200?random=5">
-                    </div>
-                    <div class="text">
-                        <h3>title</h3>
-                        <p>測試內容:溫柔個性運輸我來傷害經驗大陸管理系統加盟轉貼，默認天天電池，報名新年糖尿病，石油公主警察系統形勢，一段時間預測型號效果看著系列類型本類，特性自己的我國身體別的歌曲圖像化，授權方式品牌權力金額四個經驗好好事件還沒，經營喜歡元素巨大現象環保，貼布革命翻譯，充。</p>
-                    </div>
-                </div>
-
+        <div class="wrap">
+            <div class="introduction">
+                <h2>簡介</h2>
+                <p>近來由於交通發達、國人寵物飼養風氣提昇或供給食用等其他需求影響下，國內許多業者陸續引進各式國外物種，引進初期雖有一段甜蜜期，但在控管不當或人為遺棄的情況下，許多外來的強勢生物紛紛在野外環境中建立起自己的地盤，並逐漸威脅到台灣本地的原生物種，對本土環境造成嚴重的威脅。</p>
+                <br>
+                <p>台灣是一個海島，擁有獨特的島嶼生態系，對於外來種生物的侵入更是敏感與脆弱。因此，瞭解外來種生物在台灣地區的現況與影響，以避免其在封閉的生態系所可能帶來的嚴重傷害，益發有其必要性與重要性。</p>
             </div>
         </div>
     </div>
-
     <div class="service">
         <div class="wrap">
-            <div class="title">
-                <h2>標題</h2>
-                <p>測試內容:比賽就業免費電影自主措施有的看著文章氣息帳號為了大型遠程，寫真小孩新人不限夢幻一定會世紀不太交給突然西部才能，這種去年一定會所有人，簡單到了風雲每一個，情人引發竟然不良不了是什麼，信用幫助有點年齡簡直透明認證一面不少之家文明轉讓開通客人，一次是我主題為何。</p>
-            </div>
-            <div class="item-group">
-                <div class="item">
-                    <div class="pic">
-                        <img src="https://picsum.photos/60/40?random=12">
-                    </div>                              
-                    <div class="text">
-                        <h3>title</h3>
-                        <p>測試內容:觀眾尺寸固定郵件引起崗位或許一台成果經營，物理屬於馬上備案記住提交內地咖啡行動高達台鐵不過已有，走進消除通常，目標強烈註冊時間警告整合判斷可以用患者僅僅，體內青草湖小七限制不好意思，新增小孩並不是屏幕東京到底不知細節新型榮譽造型受傷國有，一年美容才會，引。</p>
-                    </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="flower1.jpg">
+                </div>
+                <div class="text">
+                    <h2>外來種定義</h2>
+                    <p>依據《生物多樣性公約》（CBD）的指導原則，外來種（alien species）係指被引入到其過去或現在自然分佈範圍之外的物種、亞種或較低等的分類群，包括可使該物種生存並隨後進行繁殖的任何部分，如配子、種子、蛋或繁殖體。 
+                    而外來入侵種（invasive alien species, IAS）則指：「一個物種的引入和（或）擴散會威脅到生物多樣性者。」，而國際自然保育聯盟（IUCN）則將外來入侵種定義為「會在自然或半自然生態系或棲息地中立足的外來種，且會促成改變，而威脅到當地的生物多樣性」。</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer">
-        <p>2020/06/05</p>
+        <p>&copy;B10856039期末專題</p>
+        <p>2020</p>
+        <p>我就爛</p>
     </div>
 </body>
 </html>
